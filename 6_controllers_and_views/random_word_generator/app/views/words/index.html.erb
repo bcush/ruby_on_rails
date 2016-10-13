@@ -1,0 +1,12 @@
+<% if session[:count] %>
+  <p> Random Word (attempt #<%= session[:count].to_s %>) </p>
+  <% else %>
+  <p>Random Word (attempt #1)</p>
+<% end %>
+
+<fieldset>
+  <span><%= flash[:word].to_s.upcase %></span>
+</fieldset>
+<form action="/generate">
+  <input type="submit" name="" value="Generate">
+</form>

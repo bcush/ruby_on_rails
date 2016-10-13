@@ -1,0 +1,12 @@
+<h1>Welcome to the Great Number Game!</h1>
+<p>I am thinking of a number between 1 and 100</p>
+<p>Take a guess!</p>
+<form action="/guess" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="text" name="guess">
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+  <input type="submit" name="">
+</form>
+<a href="/restart">Start Over</a>

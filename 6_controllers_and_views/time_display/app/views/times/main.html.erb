@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time</title>
+</head>
+<body>
+<h2>The current time and date</h2></p>
+<% @date = DateTime.now  %>
+<h1><%= @date.strftime("%b %d, %Y")%><br>
+<%= @date.strftime("%l:%M %p")%></h1>
+</body>
+</html>

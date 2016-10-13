@@ -1,0 +1,21 @@
+<h1>Listing users</h1>
+<table>
+  <thead>
+  <tr>
+    <td>First name</td>
+    <td>Last name</td>
+    <td>Email</td>
+  </tr>
+  </thead>
+  <% @users.each do |user| %>
+    <tr>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.email_address %></td>
+    </tr>
+  <% end %>
+</table>
+<a href="/users/new">New User</a>
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+</head>
+<body>
+<fieldset>
+<form action="/result" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <label>Your Name:
+  <input type="text" name="name"></label>
+  <label>Dojo Location:
+  <input type="text" name="location"></label>
+  <label>Favorite Language:
+  <select name="language">
+    <option>JavaScript</option>
+    <option>Python</option>
+    <option>Ruby</option>
+  </select></label>
+  <label>Comment (optional):
+  <textarea name="comment"></textarea></label>
+  <button>Submit</button>
+</form>
+</fieldset>
+</body>
+</html>
