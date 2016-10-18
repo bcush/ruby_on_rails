@@ -1,0 +1,7 @@
+<h1>New product</h1>
+<%= simple_form_for @product, :url => { :action => "create" } do |p| %>
+<%= p.input :name %>
+<%= p.input :description %>
+<%= p.input :pricing %>
+<%= p.button :submit %>
+<% end %>

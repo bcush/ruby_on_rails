@@ -1,0 +1,10 @@
+<h1>Editing product</h1>
+
+<%= simple_form_for product do |p| %>
+<%= p.input :name %>
+<%= p.input :description %>
+<%= p.input :pricing %>
+<%= p.button :submit %>
+<% end %>
+
+<a href="/products/<%= @product.id %>">Show</a> | <a href="/products">Back</a>

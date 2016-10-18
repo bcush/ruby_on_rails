@@ -1,0 +1,10 @@
+RSpec.describe "something" do
+  context "in one context" do
+    it "does one thing" do
+    end
+  end
+  context "in another context" do
+    it "does something else" do
+    end
+  end
+end

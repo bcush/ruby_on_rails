@@ -1,0 +1,18 @@
+<h1>Editing product</h1>
+<form action="/products/<%= @product.id %>" method="post">
+  <input type="hidden" name= "_method" value="patch">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <label>Category
+  <select name="category">
+  <%= @categories.each do |category| %>
+    <option value="<%= category.id %>"><%= category.name %></option>
+  <% end %>
+  </select></label>
+  <label>Name
+  <input type="text" name="name" placeholder="<%= @product.name %>"></label>
+  <label>Description
+  <input type="text" name="description" placeholder="<%= @product.description %>"></label>
+  <label>Price
+  <input type="text" name="pricing" placeholder="<%= @product.pricing %>"></label>
+  <input type="submit" name="" value="Update">
+</form>

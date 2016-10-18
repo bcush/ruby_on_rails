@@ -1,0 +1,20 @@
+<h1>Listing products</h1>
+<table>
+<thead>
+  <tr>
+    <td>Name</td>
+    <td>Description</td>
+    <td>Price</td>
+    <td></td>
+  </tr>
+</thead>
+  <% @products.each do |p| %>
+  <tr>
+    <td> p.name </td>
+    <td> p.description </td>
+    <td> p.pricing </td>
+    <td> <a href="">Show</a> | <a href="">Edit</a> | <a href="">Destroy</a></td>
+  </tr>
+  <% end %>
+</table>
+<a href="/products/new">New Product</a>
